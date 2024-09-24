@@ -1,1 +1,1 @@
-# CODSOFT
+# Java Projects
