@@ -14,7 +14,6 @@ public class binary_search {
             else{
                 end = mid-1;
             }
-
         }
         return -1;        
     }
