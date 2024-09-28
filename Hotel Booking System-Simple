@@ -1,11 +1,11 @@
 import java.util.*;
 
 class Room {
-    int roomNumber;
+    int rNumber;
     boolean isBooked;
     
-    Room(int roomNumber) {
-        this.roomNumber = roomNumber;
+    Room(int rNumber) {
+        this.rNumber = roomNumber;
         this.isBooked = false;
     }
 }
@@ -24,7 +24,7 @@ class HotelBookingSystem {
         System.out.println("Available Rooms:");
         for (Room room : rooms) {
             if (!room.isBooked) {
-                System.out.println("Room " + room.roomNumber + " is available.");
+                System.out.println("Room " + room.rNumber + " is available.");
             }
         }
     }
@@ -32,11 +32,11 @@ class HotelBookingSystem {
     void bookRoom() {
         displayRooms();
         System.out.print("Enter room number to book: ");
-        int roomNumber = sc.nextInt();
+        int rNumber = sc.nextInt();
         for (Room room : rooms) {
-            if (room.roomNumber == roomNumber && !room.isBooked) {
+            if (room.rNumber == rNumber && !room.isBooked) {
                 room.isBooked = true;
-                System.out.println("Room " + roomNumber + " booked successfully.");
+                System.out.println("Room " + rNumber + " booked successfully.");
                 return;
             }
         }
