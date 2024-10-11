@@ -5,7 +5,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class RecipeSuggestionApp extends JFrame implements ActionListener {
+public class Recipe extends JFrame implements ActionListener {
     private JTextField ingredientField;
     private JButton addButton, suggestButton;
     private JTextArea ingredientListArea, recipeArea;
@@ -13,7 +13,7 @@ public class RecipeSuggestionApp extends JFrame implements ActionListener {
     private ArrayList<String> ingredients;
     private HashMap<String, String> recipes;
 
-    public RecipeSuggestionApp() {
+    public Recipe() {
         // Initialize ingredient list and recipe database
         ingredients = new ArrayList<>();
         recipes = new HashMap<>();
@@ -36,7 +36,7 @@ public class RecipeSuggestionApp extends JFrame implements ActionListener {
         inputPanel.add(new JLabel("Enter Ingredient:"));
         inputPanel.add(ingredientField);
         inputPanel.add(addButton);
-        
+
         JPanel ingredientPanel = new JPanel();
         ingredientPanel.setLayout(new BorderLayout());
         ingredientPanel.add(new JLabel("Your Ingredients:"), BorderLayout.NORTH);
@@ -111,6 +111,6 @@ public class RecipeSuggestionApp extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new RecipeSuggestionApp();
+        new Recipe();
     }
 }
