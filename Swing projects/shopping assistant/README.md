@@ -34,7 +34,7 @@ JButton showSummaryButton = new JButton("Show Summary");
 chatArea.append(mood + " at " + timeStamp + "\n");
 ...
 JOptionPane.showMessageDialog(this, summary);
-
+```
 ## Future Enhancements
 Add more mood options.
 Export mood logs to a CSV or text file.
