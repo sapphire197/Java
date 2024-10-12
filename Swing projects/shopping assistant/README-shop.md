@@ -37,6 +37,6 @@ shoppingList.computeIfAbsent(category, k -> new ArrayList<>()).add(item);
 recommendationArea.setText(recommendations.toString());
 ```
 ## Future Enhancements
-Implement item search functionality.
-Export shopping lists to a CSV or text file.
+Implement item search functionality.<br>
+Export shopping lists to a CSV or text file.<br>
 Add more categories and improve recommendations.
