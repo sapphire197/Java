@@ -36,6 +36,6 @@ chatArea.append(mood + " at " + timeStamp + "\n");
 JOptionPane.showMessageDialog(this, summary);
 ```
 ## Future Enhancements
-Add more mood options.
-Export mood logs to a CSV or text file.
+Add more mood options.<br>
+Export mood logs to a CSV or text file.<br>
 Add graphical mood charts for visualization.
