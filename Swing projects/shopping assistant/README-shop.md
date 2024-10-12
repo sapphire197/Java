@@ -13,6 +13,7 @@ The **Smart Shopping Assistant** is a Java Swing application that helps users ma
 - **Java** for core functionality.
 - **Swing** for building the user interface.
 - **JComboBox** for selecting item categories.
+- **JList** for selecting items from predefined lists.
 - **JTextArea** for displaying shopping lists and recommendations.
 - **HashMap** for organizing items by category.
 
@@ -20,23 +21,30 @@ The **Smart Shopping Assistant** is a Java Swing application that helps users ma
 1. Clone the repository to your local machine.
 2. Compile and run the `ShoppingAssistantApp.java` file.
 3. A GUI window will appear where you can:
-   - Add items to the shopping list.
-   - Mark items as "Bought."
-   - View shopping recommendations based on purchased items.
+   - Select a category from the dropdown.
+   - Choose an item from the list.
+   - Click **"Add Item"** to add the selected item to your shopping list.
+   - Click **"Mark as Bought"** to mark selected items from the shopping list as bought.
+   - Click **"Show Recommendations"** to view suggestions based on previously bought items.
 
 ## Code Example
 
 ```java
 categoryComboBox = new JComboBox<>(categories);
+itemListModel = new DefaultListModel<>();
+itemList = new JList<>(itemListModel);
 addItemButton = new JButton("Add Item");
 markAsBoughtButton = new JButton("Mark as Bought");
 showRecommendationsButton = new JButton("Show Recommendations");
-...
-shoppingList.computeIfAbsent(category, k -> new ArrayList<>()).add(item);
-...
-recommendationArea.setText(recommendations.toString());
+
+// Adding item to the shopping list
+shoppingList.computeIfAbsent(category, k -> new ArrayList<>()).add(selectedItem);
 ```
+
 ## Future Enhancements
-Implement item search functionality.<br>
-Export shopping lists to a CSV or text file.<br>
-Add more categories and improve recommendations.
+- Implement item search functionality.
+- Export shopping lists to a CSV or text file.
+- Add more categories and improve recommendations.
+- Enhance UI/UX for better user interaction.
+
+---
