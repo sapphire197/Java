@@ -3,9 +3,9 @@ import java.util.*;
 class Room {
     int rNumber;
     boolean isBooked;
-    
+
     Room(int rNumber) {
-        this.rNumber = roomNumber;
+        this.rNumber = rNumber;
         this.isBooked = false;
     }
 }
@@ -13,13 +13,13 @@ class Room {
 class HotelBookingSystem {
     List<Room> rooms = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
-    
+
     void createRooms(int count) {
         for (int i = 1; i <= count; i++) {
             rooms.add(new Room(i));
         }
     }
-    
+
     void displayRooms() {
         System.out.println("Available Rooms:");
         for (Room room : rooms) {
@@ -28,7 +28,7 @@ class HotelBookingSystem {
             }
         }
     }
-    
+
     void bookRoom() {
         displayRooms();
         System.out.print("Enter room number to book: ");
@@ -42,7 +42,7 @@ class HotelBookingSystem {
         }
         System.out.println("Room is either booked or does not exist.");
     }
-    
+
     void run() {
         createRooms(5);
         while (true) {
@@ -56,7 +56,7 @@ class HotelBookingSystem {
             }
         }
     }
-    
+
     public static void main(String[] args) {
         new HotelBookingSystem().run();
     }
