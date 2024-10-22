@@ -24,7 +24,12 @@ class Account {
     }
 
     public void displayBalance() {
+        System.out.println("Account Number: " + accountNumber); // Display account number
         System.out.println("Balance: " + balance);
+    }
+
+    public String getAccountNumber() {
+        return accountNumber; // Getter for accountNumber
     }
 }
 
@@ -38,7 +43,10 @@ public class BankingSystem {
             System.out.print("Choose an option: ");
             int choice = sc.nextInt();
 
-            if (choice == 4) break;
+            if (choice == 4) {
+                System.out.println("Exiting the banking system.");
+                break; // Added exit message for clarity
+            }
 
             switch (choice) {
                 case 1:
@@ -58,5 +66,6 @@ public class BankingSystem {
                     System.out.println("Invalid option.");
             }
         }
+        sc.close(); // Close the scanner to prevent resource leaks
     }
 }
