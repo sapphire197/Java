@@ -24,10 +24,13 @@ public class BookDAO {
                 Statement stmt = conn.createStatement();
                 ResultSet rs = stmt.executeQuery(query)) {
             while (rs.next()) {
-                Book book = new Book(rs.getString("title"), rs.getString("author"), rs.getString("genre"),
-                        rs.getInt("publication_year"));
-                book.setId(rs.getInt("id"));
-                book.setBorrowed(rs.getBoolean("is_borrowed"));
+                Book book = new Book(
+                        rs.getInt("id"),
+                        rs.getString("title"),
+                        rs.getString("author"),
+                        rs.getString("genre"),
+                        rs.getInt("publication_year"),
+                        rs.getBoolean("is_borrowed"));
                 books.add(book);
             }
         }
