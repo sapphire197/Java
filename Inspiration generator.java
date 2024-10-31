@@ -104,13 +104,13 @@ public class EnhancedMotivationApp extends JFrame {
         "What you get by achieving your goals is not as important as what you become."
         "Success is liking yourself, liking what you do, and liking how you do it."
         "Strength doesn’t come from what you can do. It comes from overcoming what you thought you couldn’t."
-"Don’t count the days; make the days count."
-"The only way to do great work is to love what you do."
-"Success is a journey, not a destination."
-"Life is about making an impact, not making an income."
-"Stay humble. Stay hungry."
-"The biggest risk is not taking any risk."
-"To succeed, we must first believe that we can."
+        "Don’t count the days; make the days count."
+        "The only way to do great work is to love what you do."
+        "Success is a journey, not a destination."
+        "Life is about making an impact, not making an income."
+        "Stay humble. Stay hungry."
+        "The biggest risk is not taking any risk."
+        "To succeed, we must first believe that we can."
     };
 
     // Array of different font styles for variety
