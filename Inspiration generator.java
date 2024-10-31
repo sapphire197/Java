@@ -2,11 +2,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
-public class MotivationApp extends JFrame {
+public class EnhancedMotivationApp extends JFrame {
     private JLabel quoteLabel;
-    private JButton nextButton;
-    private int quoteIndex = 0;
+    private JButton nextButton, exitButton;
+    private Random random = new Random();
     
     // Array of motivational quotes
     private String[] quotes = {
@@ -22,17 +23,26 @@ public class MotivationApp extends JFrame {
         "Don’t stop until you’re proud."
     };
 
-    public MotivationApp() {
+    // Array of different font styles for variety
+    private Font[] fonts = {
+        new Font("Arial", Font.BOLD, 18),
+        new Font("Serif", Font.ITALIC, 18),
+        new Font("SansSerif", Font.PLAIN, 18),
+        new Font("Verdana", Font.BOLD | Font.ITALIC, 18),
+        new Font("Tahoma", Font.PLAIN, 18)
+    };
+
+    public EnhancedMotivationApp() {
         // Set up the frame
-        setTitle("Motivation & Dedication");
+        setTitle("Enhanced Motivation & Dedication");
         setSize(500, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
 
         // Create the quote label and set its properties
-        quoteLabel = new JLabel(quotes[quoteIndex], SwingConstants.CENTER);
-        quoteLabel.setFont(new Font("Arial", Font.BOLD, 16));
-        quoteLabel.setForeground(new Color(51, 102, 255));
+        quoteLabel = new JLabel(getRandomQuote(), SwingConstants.CENTER);
+        quoteLabel.setFont(getRandomFont());
+        quoteLabel.setForeground(Color.WHITE);
 
         // Create the "Next Quote" button and add an action listener
         nextButton = new JButton("Next Quote");
@@ -40,27 +50,62 @@ public class MotivationApp extends JFrame {
         nextButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                showNextQuote();
+                updateQuoteAndStyle();
             }
         });
+
+        // Create the "Exit" button to close the application
+        exitButton = new JButton("Exit");
+        exitButton.setFont(new Font("Arial", Font.PLAIN, 14));
+        exitButton.addActionListener(e -> System.exit(0));
 
         // Set up the layout and add components
         setLayout(new BorderLayout());
         add(quoteLabel, BorderLayout.CENTER);
-        add(nextButton, BorderLayout.SOUTH);
+
+        // Panel for buttons at the bottom
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.add(nextButton);
+        buttonPanel.add(exitButton);
+        add(buttonPanel, BorderLayout.SOUTH);
+
+        // Initial background color
+        getContentPane().setBackground(getRandomColor());
     }
 
-    // Method to show the next quote
-    private void showNextQuote() {
-        quoteIndex = (quoteIndex + 1) % quotes.length; // Cycle through quotes
-        quoteLabel.setText(quotes[quoteIndex]);
+    // Method to update the quote, font, and background color
+    private void updateQuoteAndStyle() {
+        quoteLabel.setText(getRandomQuote());
+        quoteLabel.setFont(getRandomFont());
+        getContentPane().setBackground(getRandomColor());
+    }
+
+    // Get a random quote from the array
+    private String getRandomQuote() {
+        int index = random.nextInt(quotes.length);
+        return quotes[index];
+    }
+
+    // Get a random font from the array
+    private Font getRandomFont() {
+        int index = random.nextInt(fonts.length);
+        return fonts[index];
+    }
+
+    // Generate a random background color
+    private Color getRandomColor() {
+        int red = random.nextInt(256);
+        int green = random.nextInt(256);
+        int blue = random.nextInt(256);
+        return new Color(red, green, blue);
     }
 
     public static void main(String[] args) {
         // Create and display the app
         SwingUtilities.invokeLater(() -> {
-            MotivationApp app = new MotivationApp();
+            EnhancedMotivationApp app = new EnhancedMotivationApp();
             app.setVisible(true);
         });
     }
 }
+
