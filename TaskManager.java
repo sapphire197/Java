@@ -1,3 +1,6 @@
+/*Task Management Backend
+This class manages adding, updating, and deleting tasks.*/
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
