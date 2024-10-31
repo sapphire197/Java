@@ -1,7 +1,3 @@
-Here's a `README.md` for the **Inspirational Quotes Project**:
-
----
-
 # Inspirational Quotes Project
 
 This project provides a collection of 100 inspirational quotes that can be used in various applications, such as Java Swing, web apps, or command-line programs. The quotes can motivate and encourage users through their journey by displaying positive and inspiring messages.
@@ -74,7 +70,3 @@ This project is open-source and available for modification and use under the MIT
 
 ## Contact
 For any questions or suggestions, please open an issue in the repository or contact the project maintainer.
-
---- 
-
-This README provides an overview, usage instructions, and contribution guidelines to help others integrate and contribute to the **Inspirational Quotes Project**.
