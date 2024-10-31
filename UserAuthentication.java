@@ -1,3 +1,6 @@
+/*User Authentication
+A simple authentication system that allows users to log in and access their tasks.*/
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
