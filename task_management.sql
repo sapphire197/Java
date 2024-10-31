@@ -1,3 +1,6 @@
+-- Database Setup
+-- Create a MySQL database and tables to store users and tasks.
+
 CREATE DATABASE task_management;
 
 USE task_management;
