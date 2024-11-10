@@ -4,4 +4,4 @@
 https://www.geeksforgeeks.org/java-cheat-sheet/
 
 
-ToLlearn:
+To Learn:
