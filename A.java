@@ -1,9 +1,4 @@
-Here's an **enhanced Java Swing Alert System** with additional features:
-- **Sound Notifications** for different alert types.
-- **Timeout Alerts** that auto-close after a specified duration.
-- **Custom Icons** for a better visual experience.
 
----
 
 ### Enhanced Code: `AdvancedAlertSystem.java`
 ```java
