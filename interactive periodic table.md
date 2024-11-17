@@ -12,21 +12,21 @@ This project is perfect for students, educators, and anyone interested in learni
 
 📂 Project Structure
 
-interactive-periodic-table/
-├── src/
-│   ├── Main.java
-│   ├── Element.java
-│   ├── PeriodicTable.java
-│   ├── ElementDetails.java
-│   ├── Quiz.java
-│   ├── SearchFunctionality.java
-├── resources/
-│   ├── elements.csv
-│   ├── icons/
-│   ├── styles.css
-├── README.md
-├── LICENSE
-└── .gitignore
+interactive-periodic-table/ <br>
+├── src/<br>
+│   ├── Main.java<br>
+│   ├── Element.java<br>
+│   ├── PeriodicTable.java<br>
+│   ├── ElementDetails.java<br>
+│   ├── Quiz.java<br>
+│   ├── SearchFunctionality.java<br>
+├── resources/<br>
+│   ├── elements.csv<br>
+│   ├── icons/<br>
+│   ├── styles.css<br>
+├── README.md<br>
+├── LICENSE<br>
+└── .gitignore<br>
 
 
 ---
