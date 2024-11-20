@@ -119,18 +119,6 @@ SimpleAlertSystem/
 
 ---
 
-## Screenshots
-
-### 1. Application Main Window
-
-![Main Window](https://via.placeholder.com/400x300?text=Main+Window+with+Buttons)
-
-### 2. Info Alert Example
-
-![Info Alert](https://via.placeholder.com/400x300?text=Info+Alert+Dialog)
-
----
-
 ## Technologies Used
 
 - **Java Swing**: For building the graphical user interface (GUI).
